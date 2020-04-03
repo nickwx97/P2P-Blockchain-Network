@@ -1,0 +1,55 @@
+    <meta charset="UTF-8">
+    <title>1010 Assignment 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        table {
+           width: 100%;
+           border-collapse: collapse;
+           table-layout: fixed;
+           word-wrap: break-word;
+        }
+        #indexcol{
+          width:10%;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <br>
+    <form action="#" method="POST">
+        <div class="form-group">
+        <label for="message">Enter a message:</label>
+        <input type="text" class="form-control" id="data" name="data" placeholder="Say something!">
+        </div>
+        <input type="submit" id="submit" value="Submit" class="btn btn-primary">
+    </form>
+    <button onclick="location.href = 'localhost';" class="btn btn-success">Refresh</button><br><br>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th id="indexcol" scope="col">Index</th>
+          <th scope="col">Time Stamp</th>
+          <th scope="col">Data</th>
+          <th scope="col">Previous Hash</th>
+          <th scope="col">Current Hash</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+</div>
+<script>
+var tr;
+for (var i = 0; i < data.length; i++) {
+  tr = $('<tr/>');
+  tr.append("<td>" + data[i]["index"] + "</td>");
+  tr.append("<td>" + data[i]["timestamp"] + "</td>");
+  tr.append("<td>" + data[i]["data"] + "</td>");
+  tr.append("<td>" + data[i]["previousHash"] + "</td>");
+  tr.append("<td>" + data[i]["currHash"] + "</td>");
+  $('table').append(tr);
+}
+</script>
+</body>
+</html>
